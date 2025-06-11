@@ -1,0 +1,181 @@
+/* ===== Google Fonts ===== */
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fffaf7;
+  color: #4b3e3e;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #d8a7b1;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background-color: #fce8ec;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #d8a7b1;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #c08c99;
+}
+
+#menu {
+  padding: 3rem 2rem;
+  background-color: #fffaf7;
+}
+
+#menu h2 {
+  text-align: center;
+  color: #4b3e3e;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.menu-category {
+  margin-bottom: 2.5rem;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.menu-item {
+  background-color: #fce8ec;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(216, 167, 177, 0.1);
+  transition: transform 0.2s;
+}
+
+.menu-item:hover {
+  transform: scale(1.02);
+}
+
+.menu-item h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #4b3e3e;
+}
+
+.menu-item p {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+
+.menu-item span {
+  font-weight: bold;
+  color: #c08c99;
+}
+
+#about {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4b3e3e;
+}
+
+#contact {
+  padding: 3rem 2rem;
+  background-color: #fce8ec;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  border: 1px solid #d8a7b1;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: #d8a7b1;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #c08c99;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #4b3e3e;
+  color: #fffaf7;
+  font-size: 0.9rem;
+}
