@@ -8,54 +8,67 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="logo">Sammy's Café</div>
-    <nav>
-      <ul>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <ul class="menu-list">
+      <li><a href="#brunch">Brunch</a></li>
+      <li class="has-submenu">
+        <a href="#bakery">Bakery</a>
+        <ul class="submenu">
+          <li><a href="#sweet">Sweet</a></li>
+          <li><a href="#savory">Savory</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#beverages">Beverages</a>
+        <ul class="submenu">
+          <li><a href="#hot">Hot</a></li>
+          <li><a href="#iced">Iced</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
 
-  <section class="hero">
-    <h1>Welcome to Sammy’s Café 🌸</h1>
-    <p>Fresh bites, cozy vibes, and a side of clean code.</p>
-    <a href="#menu" class="cta-btn">See the Menu</a>
-  </section>
+  <main class="content">
+    <section id="brunch">
+      <h2>Brunch</h2>
+      <div class="menu-item"><h4>Lemon Ricotta Pancakes</h4><span>$12</span></div>
+      <div class="menu-item"><h4>Truffle Egg Toast</h4><span>$14</span></div>
+      <div class="menu-item"><h4>Chive & Goat Cheese Omelet</h4><span>$13</span></div>
+    </section>
 
-  <section id="menu">
-    <h2>Our Menu</h2>
-    <div class="menu-category">
-      <h3>Breakfast 🥞</h3>
-      <div class="menu-items">
-        <div class="menu-item">
-          <h4>Avocado Toast</h4>
-          <p>Toasted sourdough, smashed avo, chili flakes</p>
-          <span>$8.50</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section id="sweet">
+      <h2>Bakery – Sweet</h2>
+      <div class="menu-item"><h4>Rosewater Macaron</h4><span>$4</span></div>
+      <div class="menu-item"><h4>Lavender Shortbread</h4><span>$3.50</span></div>
+    </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Hey! I'm Sammy, a food service veteran turned front-end developer. This mock site blends my past with my future—a cozy little menu built with love (and code). 💖</p>
-  </section>
+    <section id="savory">
+      <h2>Bakery – Savory</h2>
+      <div class="menu-item"><h4>Spinach & Feta Croissant</h4><span>$5</span></div>
+      <div class="menu-item"><h4>Tomato Basil Tartlet</h4><span>$6</span></div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    <section id="hot">
+      <h2>Beverages – Hot</h2>
+      <div class="menu-item"><h4>Vanilla Rose Latte</h4><span>$6</span></div>
+      <div class="menu-item"><h4>Earl Grey w/ Cream</h4><span>$4.50</span></div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Sammy's Café | Built with 💻 & ☕</p>
-  </footer>
+    <section id="iced">
+      <h2>Beverages – Iced</h2>
+      <div class="menu-item"><h4>Iced Honey Matcha</h4><span>$6.50</span></div>
+      <div class="menu-item"><h4>Cold Brew w/ Vanilla Foam</h4><span>$5.50</span></div>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll('.has-submenu > a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>
