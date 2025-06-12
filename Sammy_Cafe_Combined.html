@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sammy's Café</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Pacifico&display=swap');
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      background-color: #fffaf7;
+      color: #4b3e3e;
+      line-height: 1.6;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #fce8ec;
+      padding: 2rem 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #4b3e3e;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .menu-list li {
+      margin-bottom: 0.75rem;
+    }
+
+    .menu-list a {
+      text-decoration: none;
+      color: #4b3e3e;
+      font-weight: 600;
+      display: block;
+      transition: color 0.2s;
+    }
+
+    .menu-list a:hover {
+      color: #d8a7b1;
+    }
+
+    .has-submenu > .submenu {
+      display: none;
+      margin-top: 0.5rem;
+      margin-left: 1rem;
+    }
+
+    .has-submenu.active .submenu {
+      display: block;
+    }
+
+    .content {
+      margin-left: 240px;
+      padding: 2rem;
+    }
+
+    .hero {
+      background-color: #fce8ec;
+      text-align: center;
+      padding: 4rem 2rem;
+      border-radius: 12px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #d8a7b1;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .cta-btn:hover {
+      background-color: #c08c99;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .menu-item {
+      background-color: #fce8ec;
+      padding: 1rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(216, 167, 177, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-item h4 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .menu-item span {
+      font-weight: bold;
+      color: #c08c99;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border: 1px solid #d8a7b1;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    button {
+      padding: 0.75rem;
+      background-color: #d8a7b1;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #c08c99;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      background-color: #4b3e3e;
+      color: #fffaf7;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <ul class="menu-list">
+      <li><a href="#brunch">Brunch</a></li>
+      <li class="has-submenu">
+        <a href="#bakery">Bakery</a>
+        <ul class="submenu">
+          <li><a href="#sweet">Sweet</a></li>
+          <li><a href="#savory">Savory</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#beverages">Beverages</a>
+        <ul class="submenu">
+          <li><a href="#hot">Hot</a></li>
+          <li><a href="#iced">Iced</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <section class="hero">
+      <h1>Welcome to Sammy’s Café</h1>
+      <p>Fresh bites, cozy vibes, and a side of clean code.</p>
+      <a href="#brunch" class="cta-btn">See the Menu</a>
+    </section>
+
+    <section id="brunch">
+      <h2>Brunch</h2>
+      <div class="menu-item"><h4>Lemon Ricotta Pancakes</h4><span>$12</span></div>
+      <div class="menu-item"><h4>Truffle Egg Toast</h4><span>$14</span></div>
+      <div class="menu-item"><h4>Chive & Goat Cheese Omelet</h4><span>$13</span></div>
+    </section>
+
+    <section id="sweet">
+      <h2>Bakery – Sweet</h2>
+      <div class="menu-item"><h4>Rosewater Macaron</h4><span>$4</span></div>
+      <div class="menu-item"><h4>Lavender Shortbread</h4><span>$3.50</span></div>
+    </section>
+
+    <section id="savory">
+      <h2>Bakery – Savory</h2>
+      <div class="menu-item"><h4>Spinach & Feta Croissant</h4><span>$5</span></div>
+      <div class="menu-item"><h4>Tomato Basil Tartlet</h4><span>$6</span></div>
+    </section>
+
+    <section id="hot">
+      <h2>Beverages – Hot</h2>
+      <div class="menu-item"><h4>Vanilla Rose Latte</h4><span>$6</span></div>
+      <div class="menu-item"><h4>Earl Grey w/ Cream</h4><span>$4.50</span></div>
+    </section>
+
+    <section id="iced">
+      <h2>Beverages – Iced</h2>
+      <div class="menu-item"><h4>Iced Honey Matcha</h4><span>$6.50</span></div>
+      <div class="menu-item"><h4>Cold Brew w/ Vanilla Foam</h4><span>$5.50</span></div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Hey! I'm Sammy, a food service veteran turned front-end developer. This mock site blends my past with my future—a cozy little menu built with love (and code).</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Sammy's Café | Built with 💻 & ☕</p>
+    </footer>
+  </main>
+
+  <script>
+    document.querySelectorAll('.has-submenu > a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
